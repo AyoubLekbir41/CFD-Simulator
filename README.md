@@ -47,6 +47,7 @@ pip install numpy matplotlib
 Simply run the main Python file. The Tkinter GUI window will pop up automatically hosting the interactive Matplotlib plot:
 python cfd_pipe_simulator.py
 
+> 💡 **Stability Note:** If the simulation diverges (the visual plot glitches or freezes), you may need to adjust the time step (`dt`) variable inside the script. Depending on your device's processing performance, start with a lower value (e.g., `dt = 0.0005`) and gradually increase it until you find a stable balance between fluidity and computational accuracy.
 ---
 
 ### 📐 Approach: A "Construction Log"
