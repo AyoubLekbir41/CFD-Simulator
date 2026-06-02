@@ -17,6 +17,7 @@ The main objective of this research was to investigate the viability of building
 ---
 
 ### 🔬 Physics Note: Transient vs. Steady State
+
 Although the GUI allows real-time interactive manipulation (moving the mouse or toggling obstacles), a single true simulation setup requires time to yield scientifically reliable results. 
 
 When an obstacle is placed, the visual output represents the **transient state** of the fluid. To obtain physically meaningful data, quantitative analysis, or accurate streamline maps, the simulation must run uninterrupted until the velocity and pressure fields stabilize into their **steady state**.
@@ -40,5 +41,36 @@ This script is standalone and can be executed either via a standard terminal or 
 
 #### Prerequisites
 Make sure you have the required libraries installed:
-```bash
 pip install numpy matplotlib
+
+#### Execution
+Simply run the main Python file. The Tkinter GUI window will pop up automatically hosting the interactive Matplotlib plot:
+python cfd_pipe_simulator.py
+
+---
+
+### 📐 Approach: A "Construction Log"
+
+Rather than a final, polished commercial product, this repository serves as a log of the construction process. It reflects the journey of translating theoretical foundations into a functional simulator:
+
+* **Trial and Error Methodology:** Stability and functionality were achieved through practical testing and iterative adjustments.
+* **Accessible Discretization:** The simulator uses the Finite Difference Method to transform complex theoretical equations into calculable algorithms.
+* **Educational Focus:** The project prioritizes the explanation of principles like mass conservation and linear momentum over computational performance.
+* **Real-time Interaction:** The tool emphasizes the relationship between the user and the simulation, allowing real-time interaction via the mouse.
+
+---
+
+### 🚀 Key Features
+
+* **Interactive Interface:** Built with Tkinter for the GUI and Matplotlib for visual data representation.
+* **Multiple Visualization Modes:** Users can toggle between pressure maps, velocity fields (quiver plots), and streamlines.
+* **Dynamic Obstacles:** Allows the placement of circular or square obstacles that the fluid interacts with in real-time.
+
+---
+
+### ⚠️ Known Limitations
+
+As this is an educational high school project:
+
+* **Low Reynolds Number:** To maintain stability without excessive computing times, the simulation runs at a very low Reynolds number ($Re=2$).
+* **Accuracy vs. Complexity:** While the results show a reasonable approximation of fluid behavior, they are not intended to compete with professional software like SimFlow.
